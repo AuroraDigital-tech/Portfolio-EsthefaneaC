@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esthefânea Castro — Tecnologia &amp; Automação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0e18; --panel:#121826; --line:rgba(237,239,244,.1);
+    --text:#edeff4; --muted:#95 9dae; --muted2:#8b93a8;
+    --teal:#2dd4bf; --teal-dim:rgba(45,212,191,.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; min-height:100vh; background:var(--ink); color:var(--text);
+    font-family:'Inter',sans-serif;
+    display:flex; align-items:center; justify-content:center;
+    padding:28px 18px;
+  }
+  .card{
+    max-width:400px; width:100%;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:32px 26px 26px;
+    position:relative;
+    overflow:hidden;
+  }
+  .card::before{
+    content:""; position:absolute; top:-120px; right:-120px;
+    width:260px; height:260px; border-radius:50%;
+    background:radial-gradient(circle, var(--teal-dim), transparent 70%);
+  }
+  .mono{ font-family:'JetBrains Mono',monospace; letter-spacing:.05em; text-transform:uppercase; }
+  .eyebrow{ font-size:11px; color:var(--teal); margin-bottom:10px; }
+  h1{
+    font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:700;
+    margin:0 0 4px; line-height:1.15;
+  }
+  .role{ color:var(--teal); font-size:13px; margin-bottom:16px; }
+  .pitch{ color:#b7bccb; font-size:14.5px; line-height:1.55; margin-bottom:20px; }
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px; }
+  .chip{
+    font-size:11.5px; padding:7px 12px; border-radius:999px;
+    background:rgba(255,255,255,.05); border:1px solid var(--line); color:#c7cbd8;
+  }
+  .btn{
+    display:flex; align-items:center; justify-content:center; gap:8px;
+    width:100%; padding:14px; border-radius:12px; text-decoration:none;
+    font-weight:600; font-size:14.5px; margin-bottom:10px;
+    font-family:'Inter',sans-serif; border:1px solid transparent;
+  }
+  .btn-primary{ background:var(--teal); color:#06231f; }
+  .btn-ghost{ background:transparent; border-color:var(--line); color:var(--text); }
+  .btn-wa{ background:#25D366; color:#062b12; }
+  .contact{
+    margin-top:18px; padding-top:16px; border-top:1px solid var(--line);
+    font-size:12px; color:var(--muted2); text-align:center; line-height:1.8;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow mono">Leopoldina, MG</div>
+    <h1>Esthefânea Castro</h1>
+    <div class="role mono">Tecnologia &amp; Automação</div>
+    <p class="pitch">Crio sites, automações e soluções digitais — por conta própria, do zero ao lançamento.</p>
+    <div class="chips">
+      <span class="chip">Brilho e Cuidado — em produção</span>
+      <span class="chip">Aurora Digital — automação</span>
+      <span class="chip">Autodidata em tech</span>
+    </div>
+    <a class="btn btn-wa" href="https://wa.me/5532999071294" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a class="btn btn-primary" href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjMgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago1IDAgb2JqCjw8Ci9Db250ZW50cyAxMCAwIFIgL01lZGlhQm94IFsgMCAwIDU5NS4yNzU2IDg0MS44ODk4IF0gL1BhcmVudCA5IDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Db250ZW50cyAxMSAwIFIgL01lZGlhQm94IFsgMCAwIDU5NS4yNzU2IDg0MS44ODk4IF0gL1BhcmVudCA5IDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago3IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgOSAwIFIgL1R5cGUgL0NhdGFsb2cKPj4KZW5kb2JqCjggMCBvYmoKPDwKL0F1dGhvciAoXChhbm9ueW1vdXNcKSkgL0NyZWF0aW9uRGF0ZSAoRDoyMDI2MDkwNjIxNDkxMCswMCcwMCcpIC9DcmVhdG9yIChcKHVuc3BlY2lmaWVkXCkpIC9LZXl3b3JkcyAoKSAvTW9kRGF0ZSAoRDoyMDI2MDkwNjIxNDkxMCswMCcwMCcpIC9Qcm9kdWNlciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gXChvcGVuc291cmNlXCkpIAogIC9TdWJqZWN0IChcKHVuc3BlY2lmaWVkXCkpIC9UaXRsZSAoXChhbm9ueW1vdXNcKSkgL1RyYXBwZWQgL0ZhbHNlCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9Db3VudCAyIC9LaWRzIFsgNSAwIFIgNiAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjEwIDAgb2JqCjw8Ci9GaWx0ZXIgWyAvQVNDSUk4NURlY29kZSAvRmxhdGVEZWNvZGUgXSAvTGVuZ3RoIDM0NDkKPj4Kc3RyZWFtCkdhdTBGPj9CUU0mcTkiRm9ZWzdgY0UqZT5GazhnWjBkY0UhYDJtcyVwNDhRIkM3RUw+QzVqaGtScFdwMS9fUUgqTDNDcTYqLmVjY3FXay9iXjpILmNSLi0wOnMuYmc/bytoKD84STtmR0MvKFg6MytSLyNBdWk3JmNdJDZEIW1gMl9rYT9uWF5qIltWU1dGUFRaYEpHL21pJm5ST01JUFomOzEnNTMqSDklQWwuQitIcUtANVZSQCNdcWJDZy5jIiNLdTlPXG1qWk5pWUIlUDxTVWhZJzchTCoiO10+RWxrXCwwWzoxI1prYFAqUVJhW2dHXzkpXFY8YWs1ZmtLJVVLTF9fbkZgQD49O2JhXmIwJGBHak5kPURQL0JgIjBhTjF0PGFXdTYoT1kmUkBGTyEqPWIkcUtvODJwXyMmTjAlQSJjVS4rbl5ZIlxuWS91KSo1ISokXidqbkNZPzVzTEoqUVAmLnIrXCtudE1DPHVzNi9IOV9zLW5dVkstcmQnPFskX2VIQGU/WWNWajE3YS81dDdwLm9eaCdXblNwYDlJal5GNVgyWGJtYzhMK0daNTRFXUNvOnAzXnBBRClROEA+PiE0MSVTYkJrWFNBNjVjbikmU3FoUyx0Z0EoNHNOMj9tT20xUFh1PCIhWyspWDkrbS9CVzBldGorSVFYU2RTVWVSJUNjIm9FWUU8RjFnUEs4OWlgMDVuM1QxLydzPidqQUowb1tOUUxpYE5SYVh0bzUxTzQlVWtkVFlkPEwlXGBwX2dEO0RsTUAyUEk0SFlTN3Aib3I7V0k1YG4mKzxaWTcibGQ5VC4yLk9NYV0mQSI3MGhpLWVibyNXW2ksWENwNC5NKTAxPkBSVUtZU0lJUl8+WDcnLUUkWVdSQ1VNIzAhaFVbQmleaGpCUHMmJEJcUE0/dWZWJjhLQjlQSV5hJmZQMEgkUChRLilUMCY5TTUjJz5jPTdfP2xgRCIwNlkhJlMxbU81XlxgTl4iQ2EtSz1ANzBVUUxnRGdFPEVKZEIiMWAuLmhVb243XkxSOGw1aWFqUE5qdVRLVmxmYTNmLignZXFnVl5SVGo6JCcnYF0la21OZUBtJS1RKFdUKFZDSE8lJzpoXU1BTCVERT1Fb2VpJ3BsYSlqWj0mSTBXNFMwXHRFcighRzBFKURVRDdfKkJfNl5SLkFPVShNPShEJTo2PylkLS81InQ4TThBS3NEV1gyTGMmRDxDYSlIJnAvLTRQTSwlJ19gSS9WMjQzQmlDXzcmSlg2XWVhYzgyJnA7ZiIyLCYkZjxKRi1iTzRkdHBNTXNHKUo8LT8iaWpOcCIpVEY5bDszdDQkPDRWMlplQj9URHRIM09QQyMoKDEsKlJHKUQrdEArUGYrbiplKEBkZDleLjE6J0NTMk4zX3IjXVksQ3E1OF1vMEhvViMzUl5LQldtLEpEI0VqQiQ6IkA5cylgP2tVaVppbF5PckNFbGRmbyhmb1EqQlNvQWFNUiE6bUVcYEpNT2hoUV5BaXM7MzInYGFTT0NYKFg5cmdUS2QtIXJZTlhSUypVMjxJUmUrLD5HSCRgJSVeOzFnRjZiTEJrcDVmV2ZMcW1paVg4bC1vJDtgX0drMT06XFNhQENuOGU4WUozbHBNODJQZjw5KkpYS3UjMFNfMUJdYkQpb2Q9TkAwJG4xaCpicCg9WV1uWkUqPURJcGxESDlPYkVJWWdZZmUyUi43UllRL1BhN2o6SiZPIzlJPWQpPT50QnI5MzwzamYjbmMlSzhUTSk/bz0kNyFjJVpfUFwtPFxuJSEsVEsuaVhtJEhWJC8yKy9oTDtFQUBKXTk1dV5dNUNjRlptZUQwKzkwZl9mZ2InclcrWyJiTm9hRmlHWiRxRGNKITRjZkZIWjtBakFvQy01RmdsUWguOTBmQ2MrVUdjK2BfVmQhWWFCR1hlI0RNRydhKCFkcTM7bER0bWA7Pz5MUDonVDs2JlY9V0dfYy8zSzdLMzlUUkZAJUcxPUsnU08oL0ldaERgVFdzUXJfVyJrL0IlZ0M5Z1c5ck9dXC49N2MoKV07Q2FLTjcubV0+QDlnK2Q7aipIOypvTVhCJVw5JW5TSCJvWGRJQG1QYXRiUShcMzJJaEBvcTIwIiw/LENDO0hGSyJrLCYtcHVkZTwnPCFdZj1NaHAxQms3LS5TZlc+Yl51WlYxXi05OmU7aGpBQDw6IyEma1tmTkpecGE7aDhSJHBlal9kSHNYMEcpbWFlMTEyPi1hXXVObSl1KjNxKUFAPy09cD50ZGE/OyZhWkReLCpWKXRIRk9hUF8zRVVaYUEkKlxdcFtUOkNlTGBvZi0jUS9xb01iYSYhT2snVD5XbSVbXEFdUEstIU8vOThlKSFkOSxOJUZOP2RGXCgtIz0sWiJHT2MiZVhWKmFaKDlAQWAtLVFdSEVJPzcsaW5bT2xiMShQMlovbCE/WT9EQzBrbk9yb0IjbzhkdDVmYm9GJFtYTltLRUEsLVI9QlhVbCFHTGdhTjtvakZFOyFLJEBjMEspSWRGKV0iL0B0MFtNRUw5KWw1dWEsdVo+XW4jZHJQRipXQVFCWV5eKl0kPG1xPjdhaVFbLS8uaytWNWMzcWMhQjlTJShEdTdLJFhBKj5cLVxRKDI9WGZUUmlSUF8/OURbLWtwc1NRWmdZdWwlUT4nSm1tTnMzczFwckg4ZUgtPzAqRXMzIiMnLlIxUCwsYG8iRFtoZlxKVkM8cCojS0BbZTpRVzVNUUE1bylQV288TEQoKENdUyY9OWNfbSZRaihecVA0XUBTcEJtIylKVHF0M0FrTjA6KWdYNysxQEFxOStbc11mZiVQW1g5cytuKTsmQyxfTk9EcmJrUXROKyc7TjxuZjAzNTQiNURhP2FxbWZALjE6O19bWUMiJzlVOW1WUlY3KFdZPSgsP0U3bC9UV1NHKUBTL0JxcG5VRzFTLGUrWVNRKlVqLTE0N0deQ2Ync3Bac051LF1qaUVhI1NFME9IJic0MmZvRTNuKV9edD1nVk1QQTZKJS00IkwlOyRSRVkxQShqQSRoJ1okVEYpZXUqaClEOVtbTVNrP2M5WExPY05zOVdGXF8/QjI4Ii5OK0YiUjpISk1YWV87IyUwMElodSVIcWtfTz1lZk5DMDA1JzJCU3VTdWQrYUokRV8zKDNRT0U9Yy1fIW0hYDZCdEEsO1AlXWFZajtxKWI1SGVyO2dkZDpiZ0kjPkYiTnBUWi9tZ0YwSj9xaDtBRyg/XigpX3BBIVhqRWo7LXJNdHRFaEM4K1JfM2hBUTRgYlgkbVBQJHUpS0NBXVFYWDwzaldeZkApPGM7W1AyTTRwcWdhJW5pPU5Ba0djLSVFbFouYlIxP3Q0NT5GaGM/bm5lPChEXTQwUGk6aiNCJjlPOSFEMltrLV1lYXJhbiUiQD5YMjFzITdTLyVdLTdcWEYtOT9hZ2NnX10lYlpPXEhdPWkuRVxLb2o1Q183WmVGaEcyVFUycC1KZCIlS1s6QkpkKnItVjtrMidlQidKbTM2XlFuL1VsOFledDttLCJ0USdIK1ZKNG5DOidzRyVnalluVTdINVZQKWN0WiU+ZzVDS288Nj1WVzFtP0psJ0tLYHUuNE00O25DbSg4ITBdSG0icSFSaSZ1J0VlbCRKI2YsZ0MyQ1NkVjU6VT5TbHVfQCE6UU1qLkdXUXAtPVlGPDo1VE50LE1GXSFRJ0gkLEpuQykwKy83RC5NZl5xVFlvPHUqZHJZQi1SQHQoTms1ZXI0SFwxRSYwbCZlcWlwS3NAYFdnN2pGMyE1WTlXUj9bXClyQS5pWW9EIjA0X0pcUzU1ZFtINiZhQWZWX1hHQVByQ1M1b0U4Qy1XZjVPZUkqTHRtaDlMU1RaaS81KmdxWGwudTlsW1pXNEQzViRbVGQkRTFNTiksUGZuVixISy41V0orQyJjdGZKWkBPQj1XKDxCViFUVW9UP1B0Sk1mbURNJTM4QzpZV2koPWpwSCdPRkRoQGRQZGZZNU8sR1UpNkNUKFI2TmBqcEE3KidwRjgtSm0/VWknbDxTU11IQl1CcWNcTmNnTVVXPjw9cSokZ2h1WGVATWxSTCc6PColWS9gQU1GWF5bQipkIWFGY0Z1MF5PKV1YXiQzbnE/I2Qiam8iZ3FeQStkLkkqZEVDIjtuXVpEMFVXYnI3VGI9TEJsUXVtPEovIzZqJ1YvRlJlV2pXL2hdZjA6b3JGZjxlPWtDI0kxbE8ldT0lanQpM0dnMyMwTk5xXzQlV2F1Mk9FTipRJV03dGE4VypbUHVEYm9YYV9iZ2slbD9JdD5GWnFJdXFnZlNcUVBcQm9QXE8iMSc9IUczOV1HKW9nRUpLXm0oU3BoSyslPyw8dCx0cGwsQlc1cCs1aFBaZnAmWE85U09ma0s6OV84LF5QbTdwXDwyZygzZUQjMFJtQzhDSlYvZF8mQyY8bF11OCU5TTg3LjxyRWdoMG06cjo7bU1TM0pxUyM/PzxEXEFPQjRZOTpVbnNEJlUoMUtUOSNrR0hlRj5ccig0SyMpXTRKNGwvZiNyTWEjPVBAbk46M21DYjtkSnNEcVo2aFUvNUomOjVibH4+ZW5kc3RyZWFtCmVuZG9iagoxMSAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCA5OTkKPj4Kc3RyZWFtCkdhdG05OWlLZSMmQUA3LmxrKCgoWzpGXXIyZGNdYGRqXCpVUzhxSUkmXUU9Zk9tTllHWU9CV1otZFZxRDoqdGZBQ0tLdWxIYjV1NWkvOCk7NzBSWSNfaFYudFBYMGErUFM0USYoUlg/S0xDKShVZTFxMmphW0JqJ2hoaGAzNiEtaEcwbzZOMkU9SkA4VTMzPVY9TF5NXSY/NyFXJ1NvTHVXXEBjTC83RSZALk81JGFmXDZLNU86NWVYSjdNPC9cNGAwKTZxVDVablpcMUY6bjltWV87PWZGcyJsbTBWJFsjWzRrYlxoKnFGcSM3cUBjcE11ZidBSFAyYz1dIld1UCtzUG0uNGhsZUc4UShnRUAiSllWMickVU1dL3RAJDkwJyZUSko2TFVfOEQ0JyJWI0B0IlRjJlNydFE7blEmZk9HRSRjLUA3TDwhc1RkWzI+TTNeZ0ErPmFbNiw/MjZTJEcpT2JXaS91VkAqW2FFWC04UFZtW2ErazszVmpZKCtfKV9namsrMGJZZlUnTTddI15LcGhocjlSQCZCbl1qTWhUYUFIO0Q8cDU9X0gwSUlWXnE3YDR0S0NwSVVOa2xuPTomZUN0bmNAKmwjTk0yQ3RJbEBHO3JaRUs+a0BZXmAoVVAmKCVNKzVnbjM1VVtlQDVTPmVOTCpSWCwzTSc2LDc0IyJeNGAiKV9NUW9Ab0R1JzRucThqM2UiUyI2JV1tXigrZkhMOHBWKjs5Iyo9PyorJD9cLD8lUjNnUGRNOk1qRy84Pk1AMEo8QVlgYypsXTI8P0ZOZlVDOFBGM11lSUpiTElQYywkVTNxYXVMIjI+XlIkOCt0TWdOc1V1SCQlLkcpSjR0VVxocWBMbis+c1lbZjZQZnFWQC8lIylNSEk9bSNbW1YiZz9vLDtqR05IYmRNOyc9WjopUEFvPjo6JixHdG1ZbjQoNW1rWXVyMSFScFJkQ0NQWU85LmJyXUpIT0RfPkBPLT9NUztwS0YvMCo6SkJdcilJWlQzZ1RKcCNyanRMJ0FgWkRlW291X0lIVGQyREU/Qk01KzkzbDdJPGFfRTk4aiNyU0ReMm9kNCkyZGpAJVpob0E9I1tRWzE5cDMjPkFdc2FKWzcoalMjNURLJklMdWwiXSpmSzk4bWdxZ3RtXUBZXGk9LitOa1VYISlcQThYcWsydXBdTi5AcjxMSTpRUiowISo8NSZySXNLYz1INm0ya04lYXJXbSNXPHNUcWFeW2RDJ0c4Qio+MlRbMUZgMV9nTlcxSEBYNjFPLT9oUl4sTXA4Um4sOWRCSXAxOSFtKkVUK2MzY2VhIyloKVEvUTJ+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEyCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTEyIDAwMDAwIG4gCjAwMDAwMDAyMTkgMDAwMDAgbiAKMDAwMDAwMDMzMSAwMDAwMCBuIAowMDAwMDAwNDQ2IDAwMDAwIG4gCjAwMDAwMDA2NTAgMDAwMDAgbiAKMDAwMDAwMDg1NCAwMDAwMCBuIAowMDAwMDAwOTIyIDAwMDAwIG4gCjAwMDAwMDEyMDIgMDAwMDAgbiAKMDAwMDAwMTI2NyAwMDAwMCBuIAowMDAwMDA0ODA4IDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPDQ3NGNkYWY0MzEyZDYyMjgzMDdjMGIzNzI2NWFlNzM4Pjw0NzRjZGFmNDMxMmQ2MjI4MzA3YzBiMzcyNjVhZTczOD5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gOCAwIFIKL1Jvb3QgNyAwIFIKL1NpemUgMTIKPj4Kc3RhcnR4cmVmCjU4OTgKJSVFT0YK" download="curriculo-esthefanea-castro-tecnologia.pdf" target="_blank" rel="noopener">Baixar currículo</a>
+    <a class="btn btn-ghost" href="https://esthefaneacastro-crypto.github.io/Portfolio-EsthefaneaCastro/" target="_blank" rel="noopener">Ver portfólio completo</a>
+    <div class="contact">
+      (32) 99907-1294 · Esthefanea.castro@gmail.com
+    </div>
+  </div>
+</body>
+</html>
