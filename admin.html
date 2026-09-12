@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — Portfólio Esthefânea Castro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0e18; --panel:#121826; --panel2:#161d2e; --line:rgba(237,239,244,.1);
+    --line-strong:rgba(237,239,244,.18); --text:#edeff4; --muted:#8b93a8;
+    --teal:#2dd4bf; --teal-dim:rgba(45,212,191,.14); --danger:#f27070; --danger-dim:rgba(242,112,112,.14);
+    --ok:#4ade80; --ok-dim:rgba(74,222,128,.14);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--ink); color:var(--text);
+    font-family:'Inter',sans-serif; padding:28px 18px 60px;
+  }
+  .wrap{ max-width:640px; margin:0 auto; }
+  h1{ font-family:'Space Grotesk',sans-serif; font-size:24px; margin:0 0 4px; }
+  .subtitle{ color:var(--muted); font-size:14px; margin-bottom:28px; }
+  .mono{ font-family:'JetBrains Mono',monospace; }
+  .card{
+    background:var(--panel); border:1px solid var(--line); border-radius:16px;
+    padding:22px 20px; margin-bottom:20px;
+  }
+  .card h2{
+    font-family:'Space Grotesk',sans-serif; font-size:15px; margin:0 0 14px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .step-num{
+    width:20px; height:20px; border-radius:50%; background:var(--teal); color:#06231f;
+    font-size:11px; font-weight:700; display:inline-flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  label{ display:block; font-size:12.5px; color:var(--muted); margin:14px 0 6px; }
+  label:first-child{ margin-top:0; }
+  input[type=text], input[type=password], input[type=email], textarea{
+    width:100%; background:var(--panel2); border:1px solid var(--line-strong); color:var(--text);
+    border-radius:10px; padding:11px 12px; font-size:14px; font-family:'Inter',sans-serif;
+  }
+  textarea{ min-height:90px; resize:vertical; }
+  input[type=file]{ width:100%; font-size:13px; color:var(--muted); }
+  .row{ display:flex; gap:12px; }
+  .row > div{ flex:1; }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:12px 20px; border-radius:10px; border:none; cursor:pointer;
+    font-weight:600; font-size:14px; font-family:'Inter',sans-serif; margin-top:6px;
+  }
+  .btn-primary{ background:var(--teal); color:#06231f; }
+  .btn-ghost{ background:transparent; border:1px solid var(--line-strong); color:var(--text); }
+  .btn-danger{ background:var(--danger-dim); color:var(--danger); border:1px solid rgba(242,112,112,.35); }
+  .btn:disabled{ opacity:.5; cursor:not-allowed; }
+  .hint{ font-size:12px; color:var(--muted); margin-top:6px; line-height:1.5; }
+  .status{
+    margin-top:14px; padding:11px 14px; border-radius:10px; font-size:13px; display:none;
+  }
+  .status.ok{ display:block; background:var(--ok-dim); color:var(--ok); }
+  .status.err{ display:block; background:var(--danger-dim); color:var(--danger); }
+  .status.info{ display:block; background:var(--teal-dim); color:var(--teal); }
+  ol{ padding-left:18px; color:var(--muted); font-size:13px; line-height:1.8; }
+  ol a{ color:var(--teal); }
+  .warn-box{
+    background:var(--danger-dim); border:1px solid rgba(242,112,112,.3); border-radius:10px;
+    padding:12px 14px; font-size:12.5px; color:#ffb3b3; line-height:1.6; margin-top:14px;
+  }
+  .file-status{ font-size:12px; color:var(--muted); margin-top:6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Painel de administração</h1>
+  <div class="subtitle">Atualize contato, links e currículo do portfólio sem precisar editar código.</div>
+
+  <div class="card">
+    <h2><span class="step-num">1</span> Conexão com o GitHub</h2>
+    <label for="ghToken">Token de acesso pessoal (Personal Access Token)</label>
+    <input type="password" id="ghToken" placeholder="ghp_..." autocomplete="off">
+    <div class="hint">
+      Crie um token só pra este repositório em
+      <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener" style="color:var(--teal)">github.com/settings/personal-access-tokens/new</a>:
+      escolha "Only select repositories" → selecione o repositório do portfólio → em "Repository permissions" marque
+      <b>Contents: Read and write</b>. Nenhum outro acesso é necessário.
+    </div>
+    <div class="warn-box">
+      ⚠️ Esse token dá permissão de editar o repositório. Ele fica salvo só no seu navegador (nunca é enviado pra
+      mim nem sai do seu dispositivo, exceto direto para o GitHub). Não compartilhe esta página nem o token com
+      ninguém, e não acesse este painel em computador público.
+    </div>
+    <label for="ghRepo">Repositório (usuario/nome-do-repositorio)</label>
+    <input type="text" id="ghRepo" placeholder="esthefaneacastro-crypto/Portfolio-EsthefaneaCastro">
+    <label for="ghBranch">Branch</label>
+    <input type="text" id="ghBranch" value="main">
+    <button class="btn btn-primary" id="btnConnect">Carregar dados atuais</button>
+    <button class="btn btn-ghost" id="btnForget" type="button">Esquecer token salvo</button>
+    <div class="status" id="statusConnect"></div>
+  </div>
+
+  <div class="card" id="editCard" style="display:none;">
+    <h2><span class="step-num">2</span> Contato</h2>
+    <label for="phone">Telefone / WhatsApp</label>
+    <input type="text" id="phone" placeholder="(32) 99907-1294">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" placeholder="seuemail@gmail.com">
+
+    <h2 style="margin-top:22px;"><span class="step-num">3</span> Links dos projetos</h2>
+    <label for="brilhoLink">Brilho e Cuidado — link do site</label>
+    <input type="text" id="brilhoLink" placeholder="https://brilhocuidado.netlify.app">
+    <label for="auroraLink">Aurora Digital — link do site</label>
+    <input type="text" id="auroraLink" placeholder="https://aurora-br.vercel.app/?modelo=editorial">
+
+    <h2 style="margin-top:22px;"><span class="step-num">4</span> Currículo (versão tecnologia)</h2>
+    <div class="file-status" id="currentResumeStatus">Nenhum currículo carregado ainda.</div>
+    <label for="resumeFile">Substituir por um novo PDF (opcional)</label>
+    <input type="file" id="resumeFile" accept="application/pdf">
+    <div class="hint">Se você não escolher um arquivo novo, o currículo atual é mantido.</div>
+
+    <h2 style="margin-top:22px;"><span class="step-num">5</span> Salvar</h2>
+    <button class="btn btn-primary" id="btnSave">Salvar alterações no portfólio</button>
+    <div class="status" id="statusSave"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var LS_TOKEN = 'ec_admin_token';
+  var LS_REPO = 'ec_admin_repo';
+  var LS_BRANCH = 'ec_admin_branch';
+
+  var tokenEl = document.getElementById('ghToken');
+  var repoEl = document.getElementById('ghRepo');
+  var branchEl = document.getElementById('ghBranch');
+  var statusConnect = document.getElementById('statusConnect');
+  var statusSave = document.getElementById('statusSave');
+  var editCard = document.getElementById('editCard');
+  var currentResumeStatus = document.getElementById('currentResumeStatus');
+  var resumeFileEl = document.getElementById('resumeFile');
+
+  var currentSha = null;
+  var currentData = null;
+  var newResumeBase64 = null;
+
+  // Restore saved (non-sensitive-ish) values
+  tokenEl.value = localStorage.getItem(LS_TOKEN) || '';
+  repoEl.value = localStorage.getItem(LS_REPO) || '';
+  branchEl.value = localStorage.getItem(LS_BRANCH) || 'main';
+
+  function showStatus(el, kind, msg) {
+    el.className = 'status ' + kind;
+    el.textContent = msg;
+  }
+
+  // UTF-8 safe base64 helpers (JSON tem acentos: á, ã, ç etc.)
+  function b64EncodeUtf8(str) {
+    return btoa(unescape(encodeURIComponent(str)));
+  }
+  function b64DecodeUtf8(b64) {
+    return decodeURIComponent(escape(atob(b64)));
+  }
+
+  function apiHeaders(token) {
+    return {
+      'Authorization': 'token ' + token,
+      'Accept': 'application/vnd.github+json'
+    };
+  }
+
+  document.getElementById('btnForget').addEventListener('click', function () {
+    localStorage.removeItem(LS_TOKEN);
+    tokenEl.value = '';
+    showStatus(statusConnect, 'info', 'Token esquecido neste navegador.');
+  });
+
+  document.getElementById('btnConnect').addEventListener('click', function () {
+    var token = tokenEl.value.trim();
+    var repo = repoEl.value.trim();
+    var branch = branchEl.value.trim() || 'main';
+
+    if (!token || !repo || repo.indexOf('/') === -1) {
+      showStatus(statusConnect, 'err', 'Preencha o token e o repositório no formato usuario/nome-do-repositorio.');
+      return;
+    }
+
+    showStatus(statusConnect, 'info', 'Carregando...');
+    editCard.style.display = 'none';
+
+    fetch('https://api.github.com/repos/' + repo + '/contents/data.json?ref=' + encodeURIComponent(branch), {
+      headers: apiHeaders(token)
+    })
+      .then(function (r) {
+        if (r.status === 401) throw new Error('Token inválido ou sem permissão. Confira se ele tem acesso "Contents: Read and write" a este repositório.');
+        if (r.status === 404) throw new Error('data.json não encontrado nesse repositório/branch. Confirme o nome do repositório e se o arquivo data.json foi enviado.');
+        if (!r.ok) throw new Error('Erro ao acessar o GitHub (HTTP ' + r.status + ').');
+        return r.json();
+      })
+      .then(function (fileInfo) {
+        currentSha = fileInfo.sha;
+        var jsonStr = b64DecodeUtf8(fileInfo.content.replace(/\n/g, ''));
+        currentData = JSON.parse(jsonStr);
+
+        document.getElementById('phone').value = (currentData.contact && currentData.contact.phone) || '';
+        document.getElementById('email').value = (currentData.contact && currentData.contact.email) || '';
+        document.getElementById('brilhoLink').value = (currentData.links && currentData.links.brilho) || '';
+        document.getElementById('auroraLink').value = (currentData.links && currentData.links.aurora) || '';
+
+        var kb = currentData.resumeTechBase64 ? Math.round(currentData.resumeTechBase64.length * 0.75 / 1024) : 0;
+        currentResumeStatus.textContent = kb ? ('Currículo atual carregado (~' + kb + ' KB).') : 'Nenhum currículo carregado ainda.';
+
+        // Save connection info locally for next time
+        localStorage.setItem(LS_TOKEN, token);
+        localStorage.setItem(LS_REPO, repo);
+        localStorage.setItem(LS_BRANCH, branch);
+
+        editCard.style.display = 'block';
+        showStatus(statusConnect, 'ok', 'Dados carregados! Edite abaixo e salve quando quiser.');
+      })
+      .catch(function (err) {
+        showStatus(statusConnect, 'err', err.message);
+      });
+  });
+
+  resumeFileEl.addEventListener('change', function () {
+    var file = resumeFileEl.files[0];
+    if (!file) { newResumeBase64 = null; return; }
+    if (file.type !== 'application/pdf') {
+      showStatus(statusSave, 'err', 'O currículo precisa ser um arquivo PDF.');
+      resumeFileEl.value = '';
+      return;
+    }
+    var reader = new FileReader();
+    reader.onload = function () {
+      newResumeBase64 = reader.result.split(',')[1];
+      currentResumeStatus.textContent = 'Novo arquivo selecionado: ' + file.name + ' (será salvo ao clicar em "Salvar alterações").';
+    };
+    reader.readAsDataURL(file);
+  });
+
+  document.getElementById('btnSave').addEventListener('click', function () {
+    var token = tokenEl.value.trim();
+    var repo = repoEl.value.trim();
+    var branch = branchEl.value.trim() || 'main';
+
+    var phone = document.getElementById('phone').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var brilho = document.getElementById('brilhoLink').value.trim();
+    var aurora = document.getElementById('auroraLink').value.trim();
+
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showStatus(statusSave, 'err', 'E-mail inválido.');
+      return;
+    }
+    if (brilho && brilho.indexOf('https://') !== 0) {
+      showStatus(statusSave, 'err', 'O link da Brilho e Cuidado precisa começar com https://');
+      return;
+    }
+    if (aurora && aurora.indexOf('https://') !== 0) {
+      showStatus(statusSave, 'err', 'O link da Aurora Digital precisa começar com https://');
+      return;
+    }
+
+    var updated = Object.assign({}, currentData, {
+      contact: { phone: phone, email: email },
+      links: { brilho: brilho, aurora: aurora },
+      resumeTechBase64: newResumeBase64 || currentData.resumeTechBase64,
+      updatedAt: new Date().toISOString()
+    });
+
+    showStatus(statusSave, 'info', 'Salvando...');
+
+    var newContentB64 = b64EncodeUtf8(JSON.stringify(updated, null, 2));
+
+    fetch('https://api.github.com/repos/' + repo + '/contents/data.json', {
+      method: 'PUT',
+      headers: Object.assign({ 'Content-Type': 'application/json' }, apiHeaders(token)),
+      body: JSON.stringify({
+        message: 'Atualiza portfólio via painel admin',
+        content: newContentB64,
+        sha: currentSha,
+        branch: branch
+      })
+    })
+      .then(function (r) {
+        if (r.status === 401) throw new Error('Token inválido ou sem permissão de escrita.');
+        if (r.status === 409) throw new Error('O arquivo mudou desde que você carregou. Clique em "Carregar dados atuais" de novo e refaça as edições.');
+        if (!r.ok) return r.json().then(function (j) { throw new Error(j.message || ('Erro HTTP ' + r.status)); });
+        return r.json();
+      })
+      .then(function (result) {
+        currentSha = result.content.sha;
+        currentData = updated;
+        newResumeBase64 = null;
+        showStatus(statusSave, 'ok', 'Salvo! O portfólio já reflete as mudanças (pode levar 1-2 minutos para o GitHub Pages atualizar o cache).');
+      })
+      .catch(function (err) {
+        showStatus(statusSave, 'err', err.message);
+      });
+  });
+})();
+</script>
+</body>
+</html>
